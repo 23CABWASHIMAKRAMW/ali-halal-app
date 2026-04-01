@@ -1,0 +1,299 @@
+# Ali Halal Restaurant Digital Menu System Requirements Document
+
+## 1. System Overview
+
+### 1.1 System Name
+Ali Halal Restaurant Digital Menu System
+
+### 1.2 System Description
+A full-stack digital menu and order management system for Ali Halal Restaurant. Customers scan QR codes to access the menu, place orders, and make payments via their mobile devices. Restaurant administrators manage orders in real-time, set food preparation times, and send serving notifications - streamlining the entire dine-in experience.
+
+### 1.3 Technology Stack
+- **Front-end**: React.js\n- **Back-end**: Node.js with Express.js
+- **Database**: MongoDB
+- **Architecture**: MERN Stack (MongoDB, Express.js, React.js, Node.js)
+- **Additional Tools**: Mongoose for MongoDB object modeling, JWT for authentication, Socket.io for real-time updates\n
+### 1.4 Core Features
+- Customer login with phone number and table verification
+- QR code scanning access to digital menu
+- Categorized menu display with multiple cuisines
+- Shopping cart and order placement
+- Online payment and cash payment options
+- Real-time order display on admin dashboard
+- Admin order management with preparation time settings
+- Automated serving notifications to customers
+- Restaurant and food review system
+- Responsive design for mobile and desktop devices
+
+### 1.5 System Access Points
+- **Customer Side**: Access via QR code scanning (e.g., http://192.168.x.x:3000)\n- **Admin Side**: Access via dedicated admin URL (e.g., http://192.168.x.x:3000/admin) with secure login authentication
+
+## 2. Client-Side Features
+
+### 2.1 QR Code Access
+- Generate QR codes linking to the website URL (e.g., http://192.168.x.x:3000)
+- QR codes printed and placed on each restaurant table
+- Mobile camera scanning redirects to digital menu
+
+### 2.2 Customer Login & Verification
+- Phone number input field (required)
+- Table number input field (required)
+- Verification button to confirm seating
+- Access control: only verified customers can browse menu and order
+
+### 2.3 Menu Browsing
+\n**Grilled Items (4 types)**
+- Grilled Chicken Tikka - Marinated chicken pieces grilled to perfection - $12.99
+- Lamb Seekh Kebab - Spiced minced lamb on skewers - $14.99
+- Mixed Grill Platter - Assorted grilled meats with sides - $24.99
+- Grilled Fish Tandoori - Fresh fish marinated in tandoori spices - $16.99
+
+**Main Courses**
+\n*Indian Cuisine*
+- Butter Chicken - Creamy tomato-based curry with tender chicken - $13.99
+- Lamb Rogan Josh - Aromatic lamb curry with Kashmiri spices - $15.99
+- Palak Paneer - Spinach curry with cottage cheese - $11.99
+\n*Thai Cuisine*
+- Pad Thai - Stir-fried rice noodles with shrimp and peanuts - $12.99
+- Green Curry Chicken - Coconut-based curry with vegetables - $13.99
+- Tom Yum Soup - Spicy and sour Thai soup - $9.99
+
+*Chinese Cuisine*
+- Sweet and Sour Chicken - Crispy chicken in tangy sauce - $12.99
+- Kung Pao Beef - Spicy stir-fried beef with peanuts - $14.99
+- Mapo Tofu - Spicy tofu in chili bean sauce - $11.99
+
+*Malaysian Cuisine*
+- Nasi Lemak - Coconut rice with sambal and accompaniments - $10.99
+- Rendang Beef - Slow-cooked beef in rich spice paste - $15.99
+- Laksa - Spicy noodle soup with coconut milk - $11.99
+
+**Biryani (5 types)**
+- Chicken Biryani - Fragrant basmati rice layered with spiced chicken - $13.99
+- Mutton Biryani - Tender mutton pieces cooked with aromatic rice - $16.99
+- Vegetable Biryani - Mixed vegetables with saffron-infused rice - $11.99
+- Prawn Biryani - Succulent prawns with spiced basmati rice - $15.99
+- Hyderabadi Dum Biryani - Traditional slow-cooked biryani with boiled egg - $14.99
+\n**Fried Rice (4 types)**\n- Chicken Fried Rice - Wok-fried rice with chicken and vegetables - $9.99
+- Shrimp Fried Rice - Fried rice with fresh shrimp - $11.99
+- Vegetable Fried Rice - Mixed vegetables with aromatic rice - $8.99
+- Special Mixed Fried Rice - Combination of chicken, shrimp, and beef - $12.99
+
+**Desserts (5 types)**
+- Gulab Jamun - Sweet milk dumplings in rose syrup - $5.99
+- Mango Sticky Rice - Thai sweet rice with fresh mango - $6.99
+- Kulfi - Traditional Indian ice cream - $4.99
+- Coconut Pandan Cake - Malaysian layered cake - $5.99
+- Fried Banana Fritters - Crispy banana in sweet batter - $4.99\n
+**Beverages**
+- Mango Lassi - Yogurt-based mango drink - $4.99\n- Thai Iced Tea - Sweet milk tea - $3.99
+- Fresh Lime Juice - Refreshing citrus drink - $3.99
+- Soft Drinks - Assorted sodas - $2.99
+- Mineral Water - $1.99
+
+**Appetizers**
+- Samosa (2 pieces) - Crispy pastry with spiced potato filling - $4.99
+- Spring Rolls (4 pieces) - Vegetable spring rolls with sweet chili sauce - $5.99\n- Chicken Satay (5 skewers) - Grilled chicken with peanut sauce - $7.99
+- Onion Bhaji - Spiced onion fritters - $4.99\n
+### 2.4 Shopping Cart & Ordering
+- Add items to cart with quantity selection\n- View cart summary with item details and total price
+- Adjust quantities or remove items
+- Confirm table number before checkout
+\n### 2.5 Payment Options
+- **Online Payment**: Credit/debit cards and digital wallets via secure gateway
+- **Cash Payment**: Select Pay with Cash option, pay at table after meal
+- Payment confirmation message displayed
+\n### 2.6 Order Status & Notifications
+- Real-time order status updates (Pending → Preparing → Ready to Serve)\n- Push notification when food is ready to be served
+- Estimated preparation time displayed after order placement
+\n### 2.7 Thank You Page & Review\n- Thank you message: Thank you for visiting Ali Halal Restaurant! Come again!\n- Order number and table number confirmation
+- Star rating for food quality (1-5 stars)
+- Star rating for restaurant service (1-5 stars)\n- Optional text feedback box\n
+## 3. Admin-Side Features
+
+### 3.1 Admin Access\n- **Admin URL**: http://192.168.x.x:3000/admin\n- Secure admin login page with username and password
+- Session management for admin access control
+- Desktop-optimized interface for restaurant staff
+
+### 3.2 Real-Time Order Dashboard
+- Display all incoming orders in real-time
+- Order details: order ID, table number, customer phone, items ordered, quantities, total amount, payment method, order time
+- Order status indicators: New Order, Preparing, Ready to Serve, Completed\n\n### 3.3 Order Management
+- **Accept Order**: Admin confirms new orders and changes status to Preparing
+- **Set Preparation Time**: Input estimated cooking time (e.g., 15 minutes, 20 minutes)
+- **Mark as Ready**: Change status to Ready to Serve when food is prepared
+- **Send Serving Notification**: Automatically notify customer via system notification when order is ready
+- **Complete Order**: Mark order as completed after serving
+
+### 3.4 Timing Notifications
+- Visual and audio alerts for new orders
+- Countdown timer showing remaining preparation time for each order
+- Automatic notification trigger when preparation time is reached
+
+### 3.5 Menu Management (Optional)
+- Add, edit, or remove menu items
+- Update prices and availability status
+- Manage menu categories\n\n### 3.6 Order History & Reports
+- View completed orders by date range
+- Sales summary and revenue reports
+- Customer feedback and review history
+\n## 4. Database Structure (MongoDB)
+
+### 4.1 customers Collection
+```javascript
+{
+  _id: ObjectId,
+  phoneNumber: String (required, unique),
+  createdAt: Date (default: Date.now),
+  lastLogin: Date\n}
+```
+
+### 4.2 tables Collection
+```javascript
+{\n  _id: ObjectId,
+  tableNumber: String (required, unique),
+  isOccupied: Boolean (default: false),
+  currentCustomerId: ObjectId (ref: customers),
+  updatedAt: Date
+}
+```
+
+### 4.3 menuCategories Collection
+```javascript
+{
+  _id: ObjectId,
+  categoryName: String (required),
+  displayOrder: Number\n}
+```
+
+### 4.4 menuItems Collection
+```javascript
+{
+  _id: ObjectId,
+  categoryId: ObjectId (ref: menuCategories),
+  itemName: String (required),
+  description: String,
+  price: Number (required),
+  isAvailable: Boolean (default: true),\n  createdAt: Date\n}
+```
+
+### 4.5 orders Collection
+```javascript
+{
+  _id: ObjectId,\n  customerId: ObjectId (ref: customers),
+  tableNumber: String (required),
+  orderStatus: String (enum: [pending, preparing, ready, completed, cancelled]),
+  totalAmount: Number (required),
+  paymentMethod: String (enum: [online, cash]),
+  preparationTime: Number (in minutes),
+  estimatedReadyTime: Date,
+  createdAt: Date (default: Date.now),
+  updatedAt: Date
+}
+```
+
+### 4.6 orderItems Collection
+```javascript
+{\n  _id: ObjectId,
+  orderId: ObjectId (ref: orders),
+  itemId: ObjectId (ref: menuItems),
+  quantity: Number (required),
+  itemPrice: Number (required),
+  subtotal: Number (required)\n}
+```
+
+### 4.7 payments Collection
+```javascript
+{
+  _id: ObjectId,\n  orderId: ObjectId (ref: orders),
+  paymentMethod: String (enum: [credit_card, debit_card, digital_wallet, cash]),
+  paymentAmount: Number (required),
+  paymentStatus: String (enum: [pending, completed, failed]),\n  transactionId: String,
+  paymentDate: Date
+}
+```
+
+### 4.8 reviews Collection
+```javascript
+{
+  _id: ObjectId,
+  customerId: ObjectId (ref: customers),
+  orderId: ObjectId (ref: orders),
+  foodRating: Number (min: 1, max: 5, required),
+  serviceRating: Number (min: 1, max: 5, required),
+  feedbackText: String,
+  createdAt: Date\n}
+```
+
+### 4.9 adminUsers Collection
+```javascript
+{
+  _id: ObjectId,
+  username: String (required, unique),
+  passwordHash: String (required),
+  email: String,
+  createdAt: Date
+}
+```
+
+### 4.10 notifications Collection
+```javascript
+{\n  _id: ObjectId,
+  orderId: ObjectId (ref: orders),
+  notificationType: String (enum: [order_ready, order_confirmed]),
+  message: String,\n  isSent: Boolean (default: false),
+  sentAt: Date
+}
+```
+
+## 5. Technical Implementation Notes
+
+### 5.1 Front-End (React.js)
+- Component-based architecture with functional components and React Hooks
+- React Router for client-side routing
+- State management using React Context API or Redux
+- Axios for HTTP requests to backend API
+- Real-time updates using Socket.io client
+- Responsive design with CSS modules or styled-components
+
+### 5.2 Back-End (Node.js with Express.js)
+- RESTful API architecture
+- Express.js framework for routing and middleware
+- Mongoose ODM for MongoDB data modeling
+- JWT (JSON Web Tokens) for authentication and authorization
+- Bcrypt for password hashing
+- Socket.io for real-time bidirectional communication
+- CORS middleware for cross-origin requests
+- Express-validator for input validation
+- Route separation: customer routes (/) and admin routes (/admin)
+
+### 5.3 Database (MongoDB)
+- Mongoose schema definitions with validation
+- Indexing on frequently queried fields (phoneNumber, tableNumber, orderId)
+- Population for referenced documents
+- Transaction support for order and payment operations
+- Connection pooling for efficient database access
+
+### 5.4 Real-Time Communication
+- Socket.io for WebSocket connections
+- Event-driven architecture for order updates
+- Room-based communication for table-specific notifications
+- Admin dashboard receives all order events\n- Customer receives notifications for their specific orders
+
+### 5.5 Authentication & Security
+- JWT-based authentication for admin users
+- Password hashing with bcrypt (salt rounds: 10)
+- Protected routes with authentication middleware
+- Input sanitization to prevent NoSQL injection
+- HTTPS for secure data transmission in production
+
+## 6. Design Style\n
+**Customer Side:**
+- **Color Scheme**: Warm golden yellow (#F4A300) as primary color with deep red (#C8102E) accents for call-to-action elements; white (#FFFFFF) background for clean readability; light gray (#F5F5F5) for section dividers
+- **Layout**: Card-based grid layout for menu items; sticky category navigation tabs at top; floating shopping cart icon with item count badge in bottom-right corner
+- **Visual Details**: Rounded corners (8px radius) on cards and buttons; subtle box shadows (0 2px 8px rgba(0,0,0,0.1)) for depth; line-art style icons for food categories; prominent Add to Cart buttons in golden yellow with hover effect
+- **Typography**: Sans-serif font family (e.g., Roboto or Open Sans); dish names in bold 18px; descriptions in regular 14px with 1.5 line height; prices in bold 16px with red color for emphasis
+
+**Admin Side:**
+- **Color Scheme**: Professional dark navy (#1A2332) header with white text; light background (#F8F9FA) for main content area; status color coding (green for ready, orange for preparing, blue for new orders)\n- **Layout**: Table-based layout for order list with sortable columns; sidebar navigation for different admin sections; fixed header with logout button\n- **Visual Details**: Minimalist design with clear data hierarchy; action buttons with icon labels; real-time update indicators with subtle animations; modal dialogs for order details
+- **Typography**: System font stack for optimal readability; order IDs in monospace font; status badges with bold uppercase text

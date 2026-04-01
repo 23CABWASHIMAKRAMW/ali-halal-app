@@ -1,0 +1,25 @@
+I'm going to make an website project for my college degree can you help me?
+
+this is for an restaurant like E-menu card . while customer get  QR code then sacnning it show theE- menu card in mobile restaurant website .like this i want to build and also i have an specfic ideas also
+
+It is like a all type of food. restaurant name Ali Halal Restaurant.
+
+all styles of food use 4 grills types and 5 dessert ,main courses indian ,thai,chinese,malaysian,rice is fried rice use 4 types of fried rice, and etc.
+
+first show the QR code by scanning this will go to  log in page add adim id and password or customer phone number and table number to verify where they are sitting in restaurant doesn't add the home delivery option and all.then if the customer add to cart the all item then they pay with online also otherwise use click in cash delivery then finish it and show the page with thank you for visiting and come again and review for the food and restaurant. i want admin side and client side also like if the client was placing the order then the want to show to the admin then they give the timing notification for food preparing and serving also ,if the admin page is open the they want to know about who are booked like show the phone number , table number and their order also and if the admin accept the order 
+then show the notification timer to client for food preparation and to serve also.once the order is served it can automated delete within 24hrs.
+
+can you add the biriyani section also
+
+use the databse like sql or any other thing to store 
+
+Store the application data in the database based on the current app functionality
+
+can you do this same program with using html css and javascript for front-end,node.js for back-end,and for database for sql. and i want admin side and client side also like if the client was placing the order then the want to show to the admin then they give the timing notification for food preparing and serving also.
+
+
+
+It is like a all type of food. restaurant name Ali Halal Restaurant.
+
+all styles of food use 4 grills types and 5 dessert ,main courses indian ,thai,chinese,malaysian,rice is fried rice use 4 types of fried rice, and etc.                                                                                                                                                                                                                                                                                                                                                                                   can you add the biriyani section also                                                                                                                                                                                                                                                                                                                                                      can you do this same program with using html css and javascript for front-end,node.js for back-end,and for database for sql. and i want admin side and client side also like if the client was placing the order then the want to show to the admin then they give the timing notification for food preparing and serving also.                                                                                                                                                                                                                                                                                              first show the QR code by scanning this will go to log in page add adim id and password or customer phone number and table number to verify where they are sitting in restaurant doesn't add the home delivery option and all.then if the customer add to cart the all item then they pay with online also otherwise use click in cash delivery then finish it and show the page with thank you for visiting and come again and review for the food and restaurant. i want admin side and client side also like if the client was placing the order then the want to show to the admin then they give the timing notification for food preparing and serving also ,if the admin page is open the they want to know about who are booked like show the phone number , table number and their order also and if the admin accept the order
+then show the notification timer to client for food preparation and to serve also.once the order is served it can automated delete within 24hrs.
